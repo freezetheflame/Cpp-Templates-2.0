@@ -159,6 +159,7 @@ T max(const T& a, const U& b) {
 
 int main() {
   assert(jc::max(1, 3.14) == 3);  // T 推断为 int，返回值截断为 int
+  //函数模板的定义中的 T 是由第一个参数的类型推导出来的
   assert(jc::max<double>(1, 3.14) == 3.14);
 }
 ```
